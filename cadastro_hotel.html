@@ -36,8 +36,16 @@
 
     <form action="salvar_hotel.php" method="post">
 
+        <label>Email de acesso:</label>
+    <input type="email" name="email" placeholder="Digite o seu email">
+    <br><br>
+
+    <label>Senha:</label>
+    <input type="password" name="senha" placeholder="Digite a sua senha">
+        <br><br>
+
     <label>Nome do Hotel:</label>
-    <input type="text" name="text" placeholder="Digite seu Hotel" required>
+    <input type="text" name="nome" placeholder="Digite seu Hotel" required>
     <br><br>
 
     <label>Cidade:</label>
@@ -45,12 +53,12 @@
     <br><br>
 
     <label>Classificação em Estrelas:</label>
-    <input type="number" name="escrelas" min="1" max="5" placeholder="Escrelas">
-    <br><br>
+    <input type="number" name="estrelas" min="1" max="5" placeholder="Classifique o seu hotel">
 
-    <button type="submit">Cadastro finalizado</button>
+    
+    <button type="submit">Finalizar Cadastro</button>
     </form>
      <BR><BR>
-    <a href="index.html">Valtar para a página principal</a>
+    <a href="index.html">Voltar para a página principal</a>
 </body>
 </html>
