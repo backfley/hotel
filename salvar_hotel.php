@@ -10,7 +10,7 @@ $estrelas = $_POST['estrelas'];
 
 $sql = "INSERT INTO hoteis (nome, cidade, email, senha, estrelas) VALUES ('$nome', '$cidade', '$email', '$senha', '$estrelas')";
 
-if($sql){
+if(mysqli_query($conexao,$sql)){
     echo "<br>Cadastro realizado com sucesso!";
 } else {
     echo "Erro 404";

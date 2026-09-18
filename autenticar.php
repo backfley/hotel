@@ -1,5 +1,5 @@
  <?php
- require_once "conecao.php";
+ require_once "conexao.php";
  
 $email = $_POST['email'];
 $senha = $_POST['senha'];
