@@ -2,21 +2,25 @@
 
 require_once "conexao.php";
 
-$id_hotel = $_POST['id_hotel'] ??'';
-$numero_quarto = $_POST['numero_quarto'] ?? '';
+$hotel_id = $_POST['hotel_id'] ??'';
+$numero = $_POST['numero'] ?? '';
 $tipo = $_POST['tipo'] ??'';
-$preco = $_POST['preco'] ??'';
+$preco_diaria = $_POST['preco_diaria'] ??'';
 
 $sql = "SELECT * FROM quartos";
 
-$resultado mysqli_query($conexao,$sql);
+resultado = mysqli_query(
+    $conexao,
+    $sql
+);
 
-hile( $linha = mysqli_fetch_assoc($resultado)){
-    
-    if ($linha['id_hotel'] == $id){
-        echo "Número do quarto:".$linha['numero_quarto'];
+
+while( $linha = mysqli_fetch_assoc($resultado)){
+
+    if ($linha['hotel_id'] == $hotel_id){
+        echo "Número do quarto:".$linha['numero'];
         echo "Tipo do quarto:".$linha['tipo'];
-        echo "Preço do quarto:".$linha['preco'];
+        echo "Preço do quarto:".$linha['preco_diaria'];
 
     } else{
         echo "Quarto não encontrado";
@@ -32,6 +36,7 @@ hile( $linha = mysqli_fetch_assoc($resultado)){
     <title>listarquartos.com.br</title>
 </head>
 <body>
-    
+    <br><br>
+        <a href="">Cadastrar novo quarto</a>
 </body>
 </html>

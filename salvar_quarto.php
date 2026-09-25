@@ -5,14 +5,14 @@ require_once "conexao.php";
 $hotel_id = $_POST['hotel_id'] ??'';
 $numero = $_POST['numero'] ?? '';
 $tipo = $_POST['tipo'] ??'';
-$preco_diaria = $_POST['preco'] ??'';
+$preco_diaria = $_POST['preco_diaria'] ??'';
 
-$sql = "INSERT INTO quartos (hotel_id, numero, tipo, preco_diaria) VALUES ('$hotel_id', '$numero', '$tipo', '$preco_diaria')";
+$sql = "INSERT INTO quartos (hotel_id,numero,tipo,preco_diaria,disponivel) VALUES ($hotel_id, $numero, '$tipo', '$preco_diaria', 1)";
 
-if(mysqli_query($conexao,$sql)){
-    echo "<br>Cadastro realizado com sucesso!";
+if (mysqli_query($conexao, $sql)) {
+    echo "<h3>Cadastro realizado com sucesso! </h3>";
 } else {
-    echo "Erro 404";
+    echo " Erro 404 ";
 }
 ?>
 <!DOCTYPE html>
